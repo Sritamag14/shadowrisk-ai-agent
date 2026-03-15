@@ -1,12 +1,14 @@
 # ShadowRisk AI
 
-## Turning Hidden Conversations into Early Risk Intelligence
+## Turning Hidden Conversations into Early Risk Intelligence. An AI-powered enterprise agent that detects hidden operational risks in everyday organizational communication before they escalate into major disruptions.
 
 ShadowRisk AI is an AI-powered enterprise risk detection agent designed to identify early warning signals hidden within organizational communication such as emails, chat messages, and support tickets.
 
 Modern organizations generate large volumes of unstructured communication data. Within these messages often exist weak signals that indicate emerging operational issues. These signals frequently remain unnoticed until they escalate into major disruptions.
 
 ShadowRisk AI analyzes enterprise communication and detects operational risks early by using artificial intelligence.
+
+This repository contains the prototype logic for ShadowRisk AI. The full production implementation is designed to be powered by Microsoft’s AI ecosystem, including Azure OpenAI Service for natural language risk analysis and Azure AI Foundry for agent orchestration. The current prototype demonstrates the core risk-detection workflow locally while the scalable deployment architecture is intended to run on Microsoft Azure services.
 
 ---
 
@@ -38,41 +40,87 @@ This enables organizations to identify operational risks early and take preventi
 
 ---
 
-## Microsoft Technologies Used
+## ShadowRisk AI is designed to integrate with Microsoft technologies including:
 
-This project is designed around Microsoft's AI ecosystem:
+• Azure OpenAI Service – AI-powered message analysis  
+• Azure AI Foundry – AI agent orchestration  
+• Visual Studio Code – development environment  
+• GitHub – source control and collaboration  
 
-- Azure OpenAI Service – AI-powered natural language analysis
-- Azure AI Foundry – AI agent orchestration
-- Visual Studio Code – development environment
-- GitHub – code repository and collaboration
+These services enable scalable enterprise deployment of the ShadowRisk AI system.
 
 ---
 
 ## System Architecture
 
-Enterprise Communication  
-(emails, chat messages, support tickets)
+The ShadowRisk AI system analyzes enterprise communication and converts unstructured messages into structured operational risk insights.
 
-↓
+```
+Enterprise Communication Sources
+(Emails, Chat Messages, Support Tickets)
+                │
+                ▼
+        Data Ingestion Layer
+                │
+                ▼
+        ShadowRisk AI Agent
+                │
+                ▼
+     AI Risk Analysis Engine
+        (Azure OpenAI)
+                │
+                ▼
+     Risk Classification Layer
+                │
+                ▼
+      Operational Risk Insights
+                │
+                ▼
+     Dashboards & Alert Systems
+```
 
-ShadowRisk AI Agent
+## Microsoft AI Integration
 
-↓
+```
+            Visual Studio Code
+                   │
+                   ▼
+           ShadowRisk AI Agent
+                   │
+                   ▼
+          Azure OpenAI Service
+                   │
+                   ▼
+           Azure AI Foundry
+                   │
+                   ▼
+         Enterprise Risk Insights
+                   │
+                   ▼
+           GitHub Repository
+```
 
-Azure OpenAI Analysis
+## Demo Workflow
 
-↓
+```
+User Input Message
+        │
+        ▼
+"Customers reporting checkout failures again today"
+        │
+        ▼
+ShadowRisk AI Agent analyzes the message
+        │
+        ▼
+AI Risk Classification
 
-Risk Classification Engine
-
-↓
-
-Operational Risk Insights
-
-↓
-
-Dashboards and Alerts
+Risk Type: Product Failure  
+Risk Level: High  
+Probability: 75%
+        │
+        ▼
+Operational Alert Generated
+```
 
 ---
 
